@@ -4,11 +4,28 @@
 Главная
 {% endblock %}
 
-{% block content %}
-<h1 class="page_name">
-    Магазин одежды
+{% block header %}
+<h1>
+Главная
 </h1>
-<div class="main_text">
-    Сайт лучшего онлайн-магазина одежды сейчас находится в разработке...
-</div>    
+{% endblock %}
+
+{% block content %}
+<div class="text-body text-justify">
+    <hr class="mb-4">
+    <h2>
+        Введите свое имя и email:
+    </h2>
+    <div class="text-monospace">
+        <form action="/submit" method="post">
+            <hr class="mb-4">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="email" name="email" placeholder="email">
+            <hr class="mb-4">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Отправить">
+            <hr class="mb-4">
+        </form>
+    </div>
+</div>
+
 {% endblock %}

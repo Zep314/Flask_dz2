@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Подтверждение
+{% endblock %}
+
+{% block header %}
+<h1>
+Подтверждение
+</h1>
+{% endblock %}
+<hr class="mb-4">
+{% block content %}
+<div class="text-body text-justify">
+    <h4 class=class="mb-3">
+        Привет, меня зовут {{ name }}
+    </h4>
+    <hr class="mb-4">
+    <img class="d-block mx-auto mb-4" src="/static/image/foto.png" alt="Моё фото" width="150">
+    <hr class="mb-4">
+        <form action="/exit" method="post">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Выйти">
+        </form>
+</div>
+<hr class="mb-4">
+{% endblock %}
